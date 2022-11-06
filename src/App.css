@@ -31,6 +31,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   padding: 0;
   margin: 0;
+  background-color: cyan;
 }
 
 .container {
@@ -66,22 +67,24 @@ body {
 
 .btn {
   padding: 10px 15px;
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: #36454f;
+  color: white;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  border: none;
+  border: 2px;
+  border-style: outset;
   font-size: 1rem;
   transition: all 0.3s ease;
   line-height: 1.1;
 }
 
 .btn:hover {
-  background-color: #1aa762;
+  background-color: cyan;
   opacity: 1;
   cursor: pointer;
+  border-color: black;
 }
 
 .btn:disabled {
@@ -95,7 +98,7 @@ input:focus {
 
 /* Header Styles */
 header {
-  background-color: var(--primary);
+  background-color: #36454f;
 }
 
 header .inner-content {
@@ -114,11 +117,12 @@ header a {
 
 header a:hover {
   opacity: 0.7;
+  color: cyan;
 }
 
 header .brand a {
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 2.0rem;
 }
 
 header .nav-links {
@@ -147,7 +151,7 @@ header .nav-links li:last-child {
 
 .add-content .input-wrapper input {
   width: 100%;
-  background-color: var(--primary);
+  background-color: #36454f;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -189,7 +193,7 @@ header .nav-links li:last-child {
 
 .result-card .info .title {
   font-size: 1.25rem;
-  color: var(--primary);
+  color: black;
   font-weight: 600;
   margin: 0;
 }
@@ -197,7 +201,7 @@ header .nav-links li:last-child {
 .result-card .info .release-date {
   font-size: 1.25rem;
   font-weight: 300;
-  color: var(--primary);
+  color: black;
   margin: 0;
 }
 
@@ -219,11 +223,11 @@ header .nav-links li:last-child {
 
 .count-pill {
   display: block;
-  background-color: var(--secondary);
+  background-color: cyan;
   padding: 5px 15px;
   font-size: 1.125rem;
   font-weight: 600;
-  border-radius: 999px;
+  border-radius: 5px;
   color: var(--primary);
 }
 
@@ -240,7 +244,7 @@ header .nav-links li:last-child {
 
 @media (min-width: 992px) {
   .movie-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -269,7 +273,7 @@ header .nav-links li:last-child {
 }
 
 .movie-card:hover .overlay {
-  border: 3px solid var(--secondary);
+  border: 3px solid black;
 }
 
 .movie-card .inner-card-controls {
@@ -291,7 +295,7 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn {
-  color: #fefefe;
+  color: lightgray;
   background-color: transparent;
   border: none;
   transition: all 0.3s ease;
@@ -301,7 +305,7 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn:hover {
-  color: var(--secondary);
+  color: cyan;
   cursor: pointer;
 }
 

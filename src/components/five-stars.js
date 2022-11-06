@@ -1,10 +1,18 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { FaStar } from 'react-icons/fa';
 import '../App.css';
 
 const FiveStars = () => {
+  // const initialRating = JSON.parse(localStorage.getItem("rating") || "[]");
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem("rating", JSON.stringify(rating));
+  }, [rating])
+
+
+
     return (
       <div>
         {[...Array(5)].map((star, i) => {
@@ -18,11 +26,11 @@ const FiveStars = () => {
                     
                     /> 
                     <FaStar 
-                      className ="star" 
+                      className ="star form-control" 
                       color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"} 
                       onMouseEnter ={() => setHover(ratingValue)}
                       onMouseLeave ={() => setHover(null)}
-                      size={50} 
+                      size={40} 
                       />
                   </label>
                

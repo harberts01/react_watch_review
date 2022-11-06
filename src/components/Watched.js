@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
-import { MovieCard } from './MovieCard';
+import { WatchedMovieCard } from './WatchedMovieCard';
 
 export const Watched = () => {
     const {watched} = useContext(GlobalContext);
@@ -9,15 +9,12 @@ export const Watched = () => {
     <div className='movie-page'>
         <div className='container'>
             <div className='header'>
-                <h1 className='heading'>Watched Movies</h1>
-                <span className='count-pill'>
-              {watched.length} {watched.length === 1 ? 'Movie' : 'Movies'}
-            </span>
+                <h1 className='heading'>You've Seen The Movie, Now Send Us a Review!</h1>
             </div>
             {watched.length > 0 ? (
                 <div className='movie-grid'>
                     {watched.map((movie) => (
-                        <MovieCard movie = {movie} type='watched' />
+                        <WatchedMovieCard movie = {movie} type='watched' key={movie.id} />
                     ))}
                 </div>
             ) : (

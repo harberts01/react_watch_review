@@ -34,14 +34,14 @@ export const ResultCard = ({movie}) => {
                         disabled = {watchlistDisabled}
                         onClick={()=>addMovieToWatchlist(movie)}
                         >
-                    Add to Watchlist
+                    Add to Your List
                 </button>
 
                 <button className='btn' 
                         disabled = {watchedDisabled}
                         onClick={()=>addMovieToWatched(movie)}
                         >
-                    Add to Watched
+                    Review This Movie
                 </button>
             </div>
         </div>
